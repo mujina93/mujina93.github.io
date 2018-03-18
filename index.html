@@ -14,61 +14,37 @@
 
 <body>
 <div id="mynetwork"></div>
-<div id="secondnetwork"></div>
-
-<script type="/text/javascript">
-	// provide data in the DOT language
-	var DOTstring = 'dinetwork {1 -> 1 -> 2; 2 -> 3; 2 -- 4; 2 -> 1 }';
-	var parsedData = vis.network.convertDot(DOTstring);
-
-	var data = {
-	  nodes: parsedData.nodes,
-	  edges: parsedData.edges
-	}
-
-	var container = document.getElementById('secondnetwork');
-
-	var options = parsedData.options;
-
-	// you can extend the options like a normal JSON variable:
-	options.nodes = {
-	  color: 'red'
-	}
-
-	// create a network
-	var network = new vis.Network(container, data, options);
-</script>
 
 <script type="text/javascript">
-    // create an array with nodes
-    var nodes = new vis.DataSet([
-        {id: 1, label: 'Node 1'},
-        {id: 2, label: 'Node 2'},
-        {id: 3, label: 'Node 3'},
-        {id: 4, label: 'Node 4'},
-        {id: 5, label: 'Node 5'}
-    ]);
+	// load the JSON file containing the Gephi network.
+	var gephiJSON = loadJSON("data/graph.json"); // code in importing_from_gephi.
 
-    // create an array with edges
-    var edges = new vis.DataSet([
-        {from: 1, to: 3},
-        {from: 1, to: 2},
-        {from: 2, to: 4},
-        {from: 2, to: 5}
-    ]);
+	// you can customize the result like with these options. These are explained below.
+	// These are the default options.
+	var parserOptions = {
+	  edges: {
+	    inheritColors: false
+	  },
+	  nodes: {
+	    fixed: true,
+	    parseColor: false
+	  }
+	}
+	
+	var container = document.getElementById("mynetwork");
 
-    // create a network
-    var container = document.getElementById('mynetwork');
+	// parse the gephi file to receive an object
+	// containing nodes and edges in vis format.
+	var parsed = vis.network.convertGephi(gephiJSON, parserOptions);
 
-    // provide the data in the vis format
-    var data = {
-        nodes: nodes,
-        edges: edges
-    };
-    var options = {};
+	// provide data in the normal fashion
+	var data = {
+	  nodes: parsed.nodes,
+	  edged: parsed.edges
+	};
 
-    // initialize your network!
-    var network = new vis.Network(container, data, options);
+	// create a network
+	var network = new vis.Network(container, data);
 </script>
 </body>
 </html>
