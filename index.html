@@ -19,15 +19,15 @@
 	function setup(){
 		noLoop();
 		loadJSON("./data/graph.json", drawGraph);
+	}
 
-		function drawGraph(parsed){
-			var container = document.getElementById('mynetwork');
-			var data = {
-				nodes: parsed.nodes,
-				edges: parsed.edges
-			};
-			network = new vis.Network(container, data);
-		}
+	function drawGraph(parsed){
+		var container = document.getElementById('mynetwork');
+		var data = {
+			nodes: parsed.nodes,
+			edges: parsed.edges
+		};
+		network = new vis.Network(container, data);
 	}
 </script>
 
