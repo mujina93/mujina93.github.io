@@ -17,22 +17,16 @@
 <body>
 <div id="mynetwork"></div>
 
-  <script type="text/javascript">
-           var network;
+<script type="text/javascript">
+	var gephiJSON = loadJSON('./data/graph.json');
 
-  var nodes = new vis.DataSet();
-  var edges = new vis.DataSet();
+	var container = document.getElementById('mynetwork');
+	var data = {
+		gephi: gephiJSON
+	};
 
-  loadJSON('./data/graph.json');
-
-  var container = document.getElementById('mynetwork');
-  var data = {
-    nodes: nodes,
-    edges: edges
-  };
-
-  network = new vis.Network(container, data);
-  </script>
+	var network = new vis.Network(container, data);
+</script>
 </body>
 </html>
 
