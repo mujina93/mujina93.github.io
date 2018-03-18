@@ -17,31 +17,15 @@
 
 <script type="text/javascript">
 	// load the JSON file containing the Gephi network.
-	var gephiJSON = loadJSON("data/graph.json"); // code in importing_from_gephi.
+	var gephiJSON = loadJSON("./data/graph.json"); // code in importing_from_gephi.
 
-	// you can customize the result like with these options. These are explained below.
-	// These are the default options.
-	var parserOptions = {
-	  edges: {
-	    inheritColors: false
-	  },
-	  nodes: {
-	    fixed: true,
-	    parseColor: false
-	  }
-	}
-	
 	var container = document.getElementById("mynetwork");
 
 	// parse the gephi file to receive an object
 	// containing nodes and edges in vis format.
-	var parsed = vis.network.convertGephi(gephiJSON, parserOptions);
-
-	// provide data in the normal fashion
 	var data = {
-	  nodes: parsed.nodes,
-	  edged: parsed.edges
-	};
+		gephi: gephiJSON
+	}
 
 	// create a network
 	var network = new vis.Network(container, data);

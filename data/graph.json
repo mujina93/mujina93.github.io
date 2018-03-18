@@ -9,6 +9,6 @@
 		],
 	"edges": 
 		[
-			{"source": "1", "target": "4", "size": 1}	
+			{"from": 1, "to":2, "size": 1}	
 		]
 }
