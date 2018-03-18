@@ -1,6 +1,6 @@
 <html>
 <head>
-    <script type="text/javascript" src="lib/js/vis.js"></script>
+    <script type="text/javascript" src="lib/js/vis.js"></script>    	<script type="text/javascript" src="lib/js/p5.min.js"></script>
     <link href="lib/css/vis.css" rel="stylesheet" type="text/css" />
 
     <style type="text/css">
@@ -16,6 +16,94 @@
 <div id="mynetwork"></div>
 
 <script type="text/javascript">
+	function setup(){
+		noLoop();
+		loadJSON("./data/graph.json", drawGraph);
+
+		function drawGraph(parsed){
+			var container = document.getElementById('mynetwork');
+			var data = {
+				nodes: parsed.nodes,
+				edges: parsed.edges
+			};
+			network = new vis.Network(container, data);
+		}
+	}
+</script>
+
+<!--
+<script type="text/javascript">
+var network;
+
+var nodes = new vis.DataSet();
+var edges = new vis.DataSet();
+var gephiImported;
+var allowedToMoveCheckbox = document.getElementById("allowedToMove");
+allowedToMoveCheckbox.onchange = redrawAll;
+
+var parseColorCheckbox = document.getElementById("parseColor");
+parseColorCheckbox.onchange = redrawAll;
+
+var nodeContent = document.getElementById("nodeContent");
+
+loadJSON("./data/graph.json",redrawAll);
+
+var container = document.getElementById('mynetwork');
+var data = {
+    nodes: nodes,
+    edges: edges
+};
+var options = {
+    nodes: {
+        shape: 'dot',
+        fontFace: "Tahoma"
+    },
+    edges: {
+        width: 0.15,
+        inheritColor: "from"
+    },
+    tooltip: {
+        delay: 200,
+        fontSize: 12,
+        color: {
+            background: "#fff"
+        }
+    },
+    smoothCurves: {dynamic:false, type: "continuous"},
+    stabilize: false,
+    physics: {barnesHut: {gravitationalConstant: -10000, springConstant: 0.002, springLength: 150}},
+    hideEdgesOnDrag: true
+};
+
+network = new vis.Network(container, data, options);
+
+/**
+ * This function fills the DataSets. These DataSets will update the network.
+ */
+function redrawAll(gephiJSON) {
+    if (gephiJSON.nodes === undefined) {
+        gephiJSON = gephiImported;
+    }
+    else {
+        gephiImported = gephiJSON;
+    }
+
+    nodes.clear();
+    edges.clear();
+
+    var allowedToMove = allowedToMoveCheckbox.checked;
+    var parseColor = parseColorCheckbox.checked;
+    var parsed = vis.network.gephiParser.parseGephi(gephiJSON, {allowedToMove:allowedToMove, parseColor:parseColor});
+
+    // add the parsed data to the DataSets.
+    nodes.add(parsed.nodes);
+    edges.add(parsed.edges);
+
+    var data = nodes.get(2); // get the data from node 2
+    nodeContent.innerHTML = syntaxHighlight(data); // show the data in the div
+    network.zoomExtent(); // zoom to fit
+}
+/*
 	// load the JSON file containing the Gephi network.
 	var gephiJSON = loadJSON("./data/graph.json"); // code in importing_from_gephi.
 
@@ -29,6 +117,8 @@
 
 	// create a network
 	var network = new vis.Network(container, data);
+*/
 </script>
+-->
 </body>
 </html>
