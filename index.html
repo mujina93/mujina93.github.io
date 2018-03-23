@@ -67,10 +67,9 @@
 					</div>
 					<div class="col-md-6 col-xs-6 social-icons">
 						<ul class="gtco-social-top">
-							<li><a href="https://www.facebook.com/Mike.Bubblegum.Piccolini?ref=bookmarks"><i class="icon-facebook"></i></a></li>
 							<li><a href="https://github.com/mujina93"><i class="icon-github"></i></a></li>
-							<li><a href="https://github.com/mujina93"><i class="icon-github-with-circle"></i></a></li>
 							<li><a href="https://www.linkedin.com/in/michelepiccolini/"><i class="icon-linkedin"></i></a></li>
+							<li><a href="https://www.facebook.com/Mike.Bubblegum.Piccolini?ref=bookmarks"><i class="icon-facebook"></i></a></li>
 
 						</ul>
 					</div>
@@ -85,12 +84,35 @@
 						<ul>
 							<li class="active"><a href="index.html">Home</a></li>
 							<li class="has-dropdown">
-								<a href="services.html">Services</a>
+								<a href="services.html">Data Science</a>
 								<ul class="dropdown">
-									<li><a href="#">Branding</a></li>
-									<li><a href="#">Development</a></li>
-									<li><a href="#">Web Design</a></li>
-									<li><a href="#">Marketing</a></li>
+									<li><a href="#">Data Analysis</a></li>
+									<li><a href="#">Databases</a></li>
+									<li><a href="#">Machine Learning</a></li>
+									<li><a href="#">Deep Learning</a></li>
+									<li><a href="#">Statistical Modeling</a></li>
+									<li><a href="#">Probability</a></li>
+									<li><a href="#">Physics</a></li>
+								</ul>
+							</li>
+							<li class="has-dropdown">
+								<a href="services.html">Code</a>
+								<ul class="dropdown">
+									<li><a href="#">Web Programming</a></li>
+									<li><a href="#">Video Game Programming</a></li>
+									<li><a href="#">C++</a></li>
+									<li><a href="#">Blockchain & Smart Contracts</a></li>
+									<li><a href="#">Cerberus</a></li>
+									<li><a href="#">Experiments</a></li>
+								</ul>
+							</li>
+							<li class="has-dropdown">
+								<a href="services.html">Creativity</a>
+								<ul class="dropdown">
+									<li><a href="#">Board Games</a></li>
+									<li><a href="#">Video Games</a></li>
+									<li><a href="#">Poetry</a></li>
+									<li><a href="#">Generative Art</a></li>
 								</ul>
 							</li>
 							<li><a href="portfolio.html">Portfolio</a></li>
@@ -104,14 +126,36 @@
 		</nav>
 	</div>
 
-	<header id="gtco-header" class="gtco-cover gtco-cover-md" role="banner" style="background-image: url(images/img_bg_4.jpg)" data-stellar-background-ratio="0.5">
+	<header id="gtco-header" class="gtco-cover gtco-cover-md" role="banner" style="background-image: url(images/black_hexes.jpg)" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="gtco-container">
 			<div class="row row-mt-15em">
 				<div class="col-md-12 mt-text text-center animate-box" data-animate-effect="fadeInUp">
-					<h1>We Build <strong>Branded Platforms</strong></h1>
-					<h2>Far far away, behind the word mountains, far from the countries Vokalia.</h2>
-					<div class="text-center"><a href="https://vimeo.com/channels/staffpicks/93951774" class="btn btn-primary btn-lg popup-vimeo">Watch the video</a></div>
+					<script type="text/javascript">
+						function replace(id,content) {
+							var container = document.getElementById(id);
+							container.innerHTML = content;
+						}
+
+						var whatContainer = "changeling"
+						var articleContainer = "article";
+						var articles = ["a",						"a",							"a",							"a",										"a",		"a",				"a",		"",					"a",						"a",															"",			"",																			"a",										 ""]
+						var strings = ["data scientist", "game designer", "mathematician", "video game developer", "poet", "physicist", "nerd", "creative", "web developer", "blockchain \"\"\"expert\"\"\"", "lazy", "stealing your credentials right now", "self-improvement addict", "24"];
+						var count = 0;
+						var timerID = setInterval("cycle()",1600);
+						function cycle() {
+							if(count < strings.length) {
+								replace(articleContainer,articles[count]);
+								replace(whatContainer,strings[count]);
+								count++;
+							} else {
+								count=0;
+							}
+						}
+					</script>
+					<h1>I am <span id=article>a</span> <strong id="changeling">data scientist</strong></h1>
+					<h2>Welcome to my strange place</h2>
+					<!--<div class="text-center"><a href="#" class="btn btn-primary btn-lg popup-vimeo">Video</a></div>-->
 				</div>
 			</div>
 		</div>
@@ -147,10 +191,10 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-2 flex-img" style="background-image: url(images/img_1.jpg);"></div>
+		<div class="col-2 flex-img" style="background-image: url(images/me.jpg);"></div>
 	</div>
 
-	<div class="gtco-cover gtco-cover-sm" style="background-image: url(images/img_bg_2.jpg)"  data-stellar-background-ratio="0.5">
+	<div class="gtco-cover gtco-cover-sm" style="background-image: url(images/candle.jpg)"  data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="gtco-container text-center">
 			<div class="display-t">
@@ -195,7 +239,7 @@
 		<div class="col-2 flex-img" style="background-image: url(images/img_bg_2.jpg);"></div>
 	</div>
 
-	<div class="gtco-cover gtco-cover-sm" style="background-image: url(images/img_bg_3.jpg)" data-stellar-background-ratio="0.5">
+	<div class="gtco-cover gtco-cover-sm" style="background-image: url(images/leaf.jpg)" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="gtco-container text-center">
 			<div class="display-t">
@@ -212,7 +256,7 @@
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
 						<h2>Services</h2>
-						<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+						<p>Here's what I can do foy ya!</p>
 					</div>
 				</div>
 				<div class="row">
@@ -221,11 +265,11 @@
 						<a href="#" class="gtco-card-item">
 							<figure>
 								<div class="overlay"><i class="ti-plus"></i></div>
-								<img src="images/img_1.jpg" alt="Image" class="img-responsive">
+								<img src="images/data.jpg" alt="Image" class="img-responsive">
 							</figure>
 							<div class="gtco-text">
 								<h2>Data Analytics</h2>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
+								<p>Extracting valuable information from data, using Python, R, SQL, Matlab, C++, SAS... you name it!</p>
 								<p><span class="btn btn-primary">Learn more</span></p>
 							</div>
 						</a>
@@ -234,11 +278,11 @@
 						<a href="#" class="gtco-card-item">
 							<figure>
 								<div class="overlay"><i class="ti-plus"></i></div>
-								<img src="images/img_2.jpg" alt="Image" class="img-responsive">
+								<img src="images/modeling.jpg" alt="Image" class="img-responsive">
 							</figure>
 							<div class="gtco-text">
-								<h2>Web Development</h2>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
+								<h2>Modeling</h2>
+								<p>Abstracting, quantifying, turning insights into formulae, problems into solutions..</p>
 								<p><span class="btn btn-primary">Learn more</span></p>
 							</div>
 						</a>
@@ -247,40 +291,26 @@
 						<a href="#" class="gtco-card-item">
 							<figure>
 								<div class="overlay"><i class="ti-plus"></i></div>
-								<img src="images/img_3.jpg" alt="Image" class="img-responsive">
+								<img src="images/neural.jpg" alt="Image" class="img-responsive">
 							</figure>
 							<div class="gtco-text">
-								<h2>Branding</h2>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
-								<p><span class="btn btn-primary">Learn more</span></p>
-							</div>
-						</a>
-					</div>
-
-
-					<div class="col-lg-4 col-md-4 col-sm-6">
-						<a href="#" class="gtco-card-item">
-							<figure>
-								<div class="overlay"><i class="ti-plus"></i></div>
-								<img src="images/img_1.jpg" alt="Image" class="img-responsive">
-							</figure>
-							<div class="gtco-text">
-								<h2>eCommerce Development</h2>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
+								<h2>Machine Learning</h2>
+								<p>Neural networks? Deep learning? A.I.? Random forests? Complex networks? Here I come..</p>
 								<p><span class="btn btn-primary">Learn more</span></p>
 							</div>
 						</a>
 					</div>
 
+
 					<div class="col-lg-4 col-md-4 col-sm-6">
 						<a href="#" class="gtco-card-item">
 							<figure>
 								<div class="overlay"><i class="ti-plus"></i></div>
-								<img src="images/img_2.jpg" alt="Image" class="img-responsive">
+								<img src="images/ether.jpg" alt="Image" class="img-responsive">
 							</figure>
 							<div class="gtco-text">
-								<h2>Design &amp; UX</h2>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
+								<h2>Smart Contracts</h2>
+								<p>I can program money. Building custom tokens and decentralized applications on the Ethereum blockchain..</p>
 								<p><span class="btn btn-primary">Learn more</span></p>
 							</div>
 						</a>
@@ -290,11 +320,25 @@
 						<a href="#" class="gtco-card-item">
 							<figure>
 								<div class="overlay"><i class="ti-plus"></i></div>
-								<img src="images/img_3.jpg" alt="Image" class="img-responsive">
+								<img src="images/games.jpg" alt="Image" class="img-responsive">
 							</figure>
 							<div class="gtco-text">
-								<h2>Strategy</h2>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
+								<h2>Video Games</h2>
+								<p>I have always made games as a hobby. Now I am serious about my passion, thanks to engines like Godot, Unity..</p>
+								<p><span class="btn btn-primary">Learn more</span></p>
+							</div>
+						</a>
+					</div>
+
+					<div class="col-lg-4 col-md-4 col-sm-6">
+						<a href="#" class="gtco-card-item">
+							<figure>
+								<div class="overlay"><i class="ti-plus"></i></div>
+								<img src="images/websites.jpg" alt="Image" class="img-responsive">
+							</figure>
+							<div class="gtco-text">
+								<h2>Websites</h2>
+								<p>I can bring you my experience. Frontend: html, css, javascript.<br/>Backend: python, nodejs, sql, mongo..</p>
 								<p><span class="btn btn-primary">Learn more</span></p>
 							</div>
 						</a>
@@ -497,6 +541,9 @@
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
+
+
+
 
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
