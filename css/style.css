@@ -7,7 +7,7 @@
 }
 /* =======================================================
 *
-* 	Template Style 
+* 	Template Style
 *
 * ======================================================= */
 body {
@@ -2126,6 +2126,72 @@ form label {
   left: 0;
   to: .2em;
   content: "\e116";
+  font-size: 26px;
+  color: #66D37E;
+}
+
+.arrow-down {
+  padding: 0;
+  margin: 0;
+}
+.arrow-down li {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  padding-left: 40px;
+  position: relative;
+  list-style: none;
+  line-height: 1.5;
+  font-weight: 300;
+}
+.arrow-down li:before {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  left: 0;
+  to: .2em;
+  content: "\e097";
+  font-size: 26px;
+  color: #66D37E;
+}
+
+.hand-right {
+  padding: 0;
+  margin: 0;
+}
+.hand-right li {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  padding-left: 40px;
+  position: relative;
+  list-style: none;
+  line-height: 1.5;
+  font-weight: 300;
+}
+.hand-right li:before {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  left: 0;
+  to: .2em;
+  content: "\e052";
   font-size: 26px;
   color: #66D37E;
 }
